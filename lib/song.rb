@@ -17,7 +17,6 @@ attr_accessor :name, :artist
   def self.new_by_filename(file_name)
     song = file_name.split(" - ")[1]
     artist = file_name.split(" - ")[0]
-    binding.pry
     new_song = self.new(song)
     self.artist_name(artist)
     new_song
