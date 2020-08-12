@@ -19,12 +19,13 @@ attr_accessor :name, :artist
     artist = file_name.split(" - ")[0]
     new_song = self.new(song)
     artist_name=(artist)
+    @artist.add_song(self)
     new_song
     end
      
   def artist_name=(name)
     @artist = Artist.find_or_create_by_name(name)
-    @artist.add_song(self)
+    
     end
    
 
